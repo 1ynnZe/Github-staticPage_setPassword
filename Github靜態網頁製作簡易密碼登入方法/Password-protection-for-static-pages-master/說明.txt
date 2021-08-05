@@ -1,0 +1,8 @@
+1.在自己的responsity上傳上述文件Password-protection-for-static-pages-master>index.html
+2.接著進入自己的github pageindex.html 
+直接打上你要設定的密碼按Enter
+此時畫面會出現wrong password
+莫急莫慌，將此畫面的網址#以後的數字複製下來
+3.在自己的responsity新增一個名為網址#以後的數字的檔案夾，內有你輸入正確密碼後導向的頁面及大功告成
+
+
