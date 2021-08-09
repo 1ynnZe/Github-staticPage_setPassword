@@ -1,0 +1,28 @@
+使用說明:基本上只能用於一頁式網站的加密
+另一個加密方法的缺點是登入後只要對方複製登入後連結還是進得去
+而此方法是只要重新整理就要重新登入
+1.把一頁式網站首頁html內文複製貼上到https://robinmoisson.github.io/staticrypt/ 此網站的HTML/string to encrypt框內
+2.Passphrase框是輸入你要設定的密碼
+3.+ More options>Page title是登入頁的標題名稱(這可以下載完後再改)
+4.按下Generate passphrase protected HTML後再按下Download html file with password prompt 下載出一個encrypted.html檔案
+5.將此網站丟進到你的網站資料夾，這個encrypted.html可以改檔名為index.html 這樣即可完成!
+
+補充:若要做登入後的頁面能連結其他頁面 只能使用jquery.load()的ajax方法了 使用jquery.load()預覽時需用web server開啟
+
+
+如果登入後發現頁面的css載入比html慢 的話:
+
+
+登入encrypted0 123456button會發現css載入的比html慢 
+
+登入encrypted1 123456button會發現css載入的比html慢
+可用firefox開會看的更明顯
+
+登入encrypted2 進到主畫面的 會發現先是全部空白 等一下才出現123456button但css樣式也是同時有的
+ encrypted2 的方法是直接把css寫進html的header裡
+
+因此可以用body.loading:after來寫一個覆蓋在最上面的loading 畫面，而這個.loading 畫面的css就要直接寫進html的header裡
+而一頁式網站首頁就需加上例如 setTimeout(function () {
+        $('body').removeClass('finish')
+    }, 1000)
+
